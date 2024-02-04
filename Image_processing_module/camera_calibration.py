@@ -36,6 +36,10 @@ class CameraCalibration:
         chessboard_3d_corners_for_calibration = np.reshape(chessboard_3d_corners_for_calibration,(len(chessboard_3d_corners_for_calibration),81,1,3))
         # calibrate the camera using object and image points
         ret, intrinsic_matrix, distortion_coefficients, rotation_vector, translation_vector = cv2.calibrateCamera(chessboard_3d_corners_for_calibration, pixel_coordinates_for_calibration, (self.IMAGE_WIDTH, self.IMAGE_HEIGHT), None, None)
+        # Get the new optimal camera matrix
+        intrinsic_matrix, roi = cv2.getOptimalNewCameraMatrix(intrinsic_matrix, distortion_coefficients, (self.IMAGE_WIDTH, self.IMAGE_HEIGHT), 1, (self.IMAGE_WIDTH, self.IMAGE_HEIGHT))
+
+
         print("camera has been calibrated")
        
         # calulate the extrinsic parametres with solve pnp
