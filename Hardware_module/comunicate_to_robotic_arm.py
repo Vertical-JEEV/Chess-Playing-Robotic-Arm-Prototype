@@ -16,7 +16,7 @@ class ArduinoComunicator:
     def __init__(self):
         #self.COM_PORT = self.get_com_port()
         
-        self.robotic_arm = pybullet.loadURDF(r"Hardware_module\braccio_description-master\urdf\braccio.urdf")
+        self.robotic_arm = pybullet.loadURDF(r"Hardware_module\ros_braccio_urdf-master\ros_braccio_urdf-master\urdf\braccio_arm.urdf")
         self.end_effector_link_id = pybullet.getLinkState(self.robotic_arm, "gripper_movable")[10]
         self.target_orientation = pybullet.getQuaternionFromEuler([0, 0, 0])
 
