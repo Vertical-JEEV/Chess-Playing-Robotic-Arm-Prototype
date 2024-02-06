@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<package>
+  <name>braccio_description</name>
+  <version>0.0.1</version>
+  <description>Model of Arduino Braccio toy robot.</description>
+  <maintainer email="jonathan.balzer@vathos.net">Jonathan Balzer</maintainer>
+  <license>MIT</license>
+  <url type="repository">https://github.com/jonabalzer/braccio_description</url>
+  <author email="jonathan.balzer@vathos.net">Jonathan Balzer</author>
+  <buildtool_depend>catkin</buildtool_depend>
+  <export></export>
+</package>
