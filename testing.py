@@ -11,3 +11,5 @@ robot = pybullet.loadURDF(r"Hardware_module\braccio_description-master\urdf\brac
 
 while True:
     pybullet.stepSimulation()
+
+print("testing git on ubuntu")
